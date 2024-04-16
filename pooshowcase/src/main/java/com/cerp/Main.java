@@ -19,7 +19,7 @@ public class Main
     {
         System.out.println( "Comencemos..." );
         // Crear instancia de FileHandler para cargar las preguntas desde preguntas.data
-        FileHandler<Pregunta> fileHandler = new FileHandler<Pregunta>("pooshowcase\\src\\main\\java\\com\\cerp\\resource\\preguntas.data");
+        FileHandler<Pregunta> fileHandler = new FileHandler<Pregunta>("pooshowcase\src\main\java\com\cerp\resource");
 
         List<Pregunta> modelo = new ArrayList<>();        
 
