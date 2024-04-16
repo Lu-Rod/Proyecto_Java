@@ -6,7 +6,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.List;
 
-import com.cerp.FileHandler;
+//import com.cerp.FileHandler;
 import com.cerp.modelo.Pregunta;
 import com.cerp.vista.AdminVista;
 import com.cerp.vista.InicioVista;
@@ -18,13 +18,13 @@ import com.cerp.vista.InicioVista;
 public class AdminControlador implements ActionListener {
     private List<Pregunta> modelo;
     private AdminVista vista;
-    private InicioVista vistaInicio;
-    private FileHandler<Pregunta> fileHandler;
+    private InicioVista vistaInicio2;
+    //private FileHandler<Pregunta> fileHandler;
 
     public AdminControlador(List<Pregunta> modelo, AdminVista vista, InicioVista vistaInicio) {
         this.modelo = modelo;
         this.vista = vista;
-        this.vistaInicio = vistaInicio;
+        this.vistaInicio2 = vistaInicio;
 
         vista.getConfirmarButton().addActionListener(this);
         vista.getAtrasButton().addActionListener(this);
@@ -39,7 +39,7 @@ public class AdminControlador implements ActionListener {
         this.vista.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                vistaInicio.getControlador().guardarPreguntas();
+                vistaInicio2.getControlador().guardarPreguntas();
                 System.exit(0);
             }
         });
@@ -63,7 +63,7 @@ public class AdminControlador implements ActionListener {
 
                 this.modelo.add(nuevaPregunta);
                 //vistaInicio.getControlador().setModelo(modelo);
-                vistaInicio.getControlador().ActualizarControlador();
+                vistaInicio2.getControlador().ActualizarControlador();
                 
                 System.out.println("DENTRO de ADMIN El tamanio es " + modelo.size());
                 

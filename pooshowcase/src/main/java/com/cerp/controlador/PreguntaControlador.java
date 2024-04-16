@@ -24,13 +24,13 @@ import java.util.List;
 public class PreguntaControlador implements ActionListener {
     private List<Pregunta> modelo;
     private PreguntaVista vista;
-    private InicioVista vistaInicio;
+    private InicioVista vistaInicio2;
     private int correctIndex;
 
     public PreguntaControlador(List<Pregunta> modelo, PreguntaVista vista, InicioVista vistaInicio) {
         this.modelo = modelo;
         this.vista = vista;
-        this.vistaInicio = vistaInicio;
+        this.vistaInicio2 = vistaInicio;
 
         vista.getConfirmarButton().addActionListener(this);
         vista.getAtrasButton().addActionListener(this);
@@ -47,7 +47,7 @@ public class PreguntaControlador implements ActionListener {
         this.vista.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                vistaInicio.getControlador().guardarPreguntas();
+                vistaInicio2.getControlador().guardarPreguntas();
                 System.exit(0);
             }
         });

@@ -29,6 +29,7 @@ public class InicioControlador implements ActionListener {
         vista.getLabelPreguntas().setText("Hay en el sistema " + modelo.size() +" preguntas");
     }
 
+    @SuppressWarnings("unused")
     @Override
     public void actionPerformed(ActionEvent e) {
          if (e.getSource() ==vista.getItemAdmin()) {
@@ -46,9 +47,6 @@ public class InicioControlador implements ActionListener {
             
             System.out.println("Hola juego luego de crear vistaPregunta");
             PreguntaControlador controladorPregunta = new PreguntaControlador(modelo, vistaPregunta, vista);
-
-
-
         }
         
         vista.dispose();

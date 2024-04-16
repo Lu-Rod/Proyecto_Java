@@ -13,7 +13,7 @@ import com.cerp.modelo.Pregunta;
 /**
  * @file InicioVista.java
  * @brief Clase para la vista principal de la aplicación.
- * @date 20/03/2023
+ * @date 20/03/2024
  * @version 1.0
  */  
  
